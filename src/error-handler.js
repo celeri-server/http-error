@@ -1,7 +1,7 @@
 
 import { HttpError } from './http-error';
 
-const defaultStructure = ({ error }) => ({ error.message });
+const defaultStructure = ({ error }) => ({ error: error.message });
 
 export const errorHandler = (structure = defaultStructure) => {
 	return ({ req, res, error }) => {
@@ -11,7 +11,5 @@ export const errorHandler = (structure = defaultStructure) => {
 		res.statusCode = httpError.statusCode;
 		res.setHeader('Content-Type', 'application/json');
 		res.end(JSON.stringify(payload));
-
-		return { req, res };
 	};
 };
