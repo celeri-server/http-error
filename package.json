@@ -1,0 +1,30 @@
+{
+  "name": "@celeri/http-error",
+  "version": "1.0.0",
+  "description": "HttpError class and general error handler middleware",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celeri-server/http-error.git"
+  },
+  "keywords": [
+    "celeri",
+    "error",
+    "http",
+    "error",
+    "middleware"
+  ],
+  "author": "James Brumond <james@jbrumond.me> (http://www.jbrumond.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/celeri-server/http-error/issues"
+  },
+  "homepage": "https://github.com/celeri-server/http-error#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-celeri": "^1.0.0"
+  }
+}
