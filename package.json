@@ -2,9 +2,10 @@
   "name": "@celeri/http-error",
   "version": "1.0.2",
   "description": "HttpError class and general error handler middleware",
-  "main": "./src/index.js",
+  "main": "bulid/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir build",
+    "postinstall": "postinstall-build build"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,11 @@
   "homepage": "https://github.com/celeri-server/http-error#readme",
   "devDependencies": {
     "eslint": "^3.19.0",
-    "eslint-config-celeri": "^1.0.0"
+    "eslint-config-celeri": "^1.0.0",
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1"
+  },
+  "dependencies": {
+    "postinstall-build": "^3.0.1"
   }
 }
