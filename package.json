@@ -2,7 +2,7 @@
   "name": "@celeri/http-error",
   "version": "1.0.3",
   "description": "HttpError class and general error handler middleware",
-  "main": "bulid/index.js",
+  "main": "build/index.js",
   "scripts": {
     "build": "babel src --out-dir build",
     "postinstall": "postinstall-build build"
