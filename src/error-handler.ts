@@ -4,12 +4,12 @@ import { ErrorMiddlewareFunction } from '@celeri/middleware-pipeline';
 import { MiddlewareInput } from '@celeri/http-server';
 
 export interface ErrorResponseStructure {
-	(options: MiddlewareInput & { error: HttpError }): object;
+	(options: MiddlewareInput<any> & { error: HttpError }): object;
 }
 
 const defaultStructure: ErrorResponseStructure = ({ error }) => ({ error: error.message });
 
-export const errorHandler = (structure = defaultStructure) : ErrorMiddlewareFunction<MiddlewareInput> => {
+export const errorHandler = (structure = defaultStructure) : ErrorMiddlewareFunction<MiddlewareInput<any>> => {
 	return ({ req, res, error }) => {
 		const httpError = error instanceof HttpError ? error : new HttpError(500, error);
 		const payload = structure({ req, res, error: httpError });
